@@ -24,9 +24,9 @@ These instructions were adapted from https://blog.doit-intl.com/automatically-la
 
     a.  Add the following into QUERY and click RUN QUERY.
 
-        resource.type="gce_instance"
-        protoPayload.methodName="beta.compute.instances.insert"
         operation.first="true"
+        protoPayload.methodName="v1.compute.instances.insert"
+        resource.type="gce_instance"
 
     b.  Under ACTIONS select CREATE SINK.  Name the sink `autotagger-sink` and set the destination
         to the Pub/Sub topic you created.
